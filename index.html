@@ -1,1 +1,42 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Students</h1>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+ 
+  <div class="card">
+    <input type="file" id="pdfUpload" accept="application/pdf" />
+    <canvas id="pdfCanvas"></canvas>
+  </div>
+
+ 
+  <div class="card">
+    <input type="text" id="name" placeholder="Name" />
+    <input type="tel" id="phone" placeholder="Phone" />
+    <input type="number" id="age" placeholder="Age" />
+    <input type="text" id="district" placeholder="District" />
+    <button id="saveBtn">Save</button>
+  </div>
+
+ 
+  <div class="card">
+    <h2>Saved Students</h2>
+    <ul id="studentList"></ul>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
