@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student App</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قاعدة بيانات المستفيدين</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-  <header>
-    <h1>Students</h1>
-    <button id="themeToggle">🌙</button>
-  </header>
+<header>
+  <input type="file" id="pdfUpload" accept="application/pdf">
+  <button id="themeToggle">🌙</button>
+</header>
 
- 
-  <div class="card">
-    <input type="file" id="pdfUpload" accept="application/pdf" />
-    <canvas id="pdfCanvas"></canvas>
-  </div>
+<main>
+  <canvas id="pdfCanvas"></canvas>
 
- 
-  <div class="card">
-    <input type="text" id="name" placeholder="Name" />
-    <input type="tel" id="phone" placeholder="Phone" />
-    <input type="number" id="age" placeholder="Age" />
-    <input type="text" id="district" placeholder="District" />
-    <button id="saveBtn">Save</button>
-  </div>
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="الاسم">
+    <input type="text" id="phone" placeholder="رقم الجوال">
+    <input type="number" id="age" placeholder="العمر">
+    <input type="text" id="district" placeholder="الحي">
+    <button type="submit">حفظ</button>
+  </form>
+</main>
 
- 
-  <div class="card">
-    <h2>Saved Students</h2>
-    <ul id="studentList"></ul>
-  </div>
-</div>
+<section id="progress">
+  <div id="progressBar"></div>
+</section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
-<script src="script.js"></script>
+<section id="dataList"></section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+<!-- مهم: الترتيب -->
+<script src="state.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
